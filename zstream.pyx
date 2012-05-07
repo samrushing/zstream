@@ -98,7 +98,7 @@ def compress (data_gen, int level=zlib.Z_DEFAULT_COMPRESSION, int size=16384, di
         PyMem_Free (buffer)
         
         
-def uncompress (data_gen, int level=zlib.Z_DEFAULT_COMPRESSION, int size=16384, dict=None):
+def uncompress (data_gen, int size=16384, dict=None):
     cdef zlib.z_stream zstr
     cdef char * buffer
     cdef bytes block
